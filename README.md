@@ -21,13 +21,13 @@ Here, you’ll find everything you need to set up, run, and contribute to **UI t
 
 Before you begin, ensure you have the following installed:  
 
-- [Java JDK 11+]([https://adoptium.net/](https://www.oracle.com/apac/java/technologies/downloads/))  
-- [Maven](https://maven.apache.org/)  
-- [Node.js](https://nodejs.org/)  
-- [Appium Server](https://appium.io/)  
-- [Android Studio](https://developer.android.com/studio) (for Android setup)  
-- [Xcode](https://developer.apple.com/xcode/) (for iOS setup, macOS only)  
-- [Git](https://git-scm.com/)  
+- [Java JDK 11+]
+- [Maven]
+- [Node.js] 
+- [Appium Server] 
+- [Android Studio](for Android setup)  
+- [Xcode](for iOS setup, macOS only)  
+- [Git]
 
 Refer to [CONTRIBUTING.md](./CONTRIBUTING.md) for contribution rules.  
 
