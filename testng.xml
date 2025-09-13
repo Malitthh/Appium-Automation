@@ -3,6 +3,7 @@
     <test name="ApiDemosTest">
         <classes>
             <class name="com.example.appium.tests.FirstAppTest"/>
+            <!-- <class name="com.example.appium.tests.ViewsPageTest"/> -->
         </classes>
     </test>
 </suite>
