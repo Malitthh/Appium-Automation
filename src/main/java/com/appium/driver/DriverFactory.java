@@ -1,4 +1,4 @@
-package com.example.appium.driver;
+package com.appium.driver;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;

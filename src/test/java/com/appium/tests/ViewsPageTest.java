@@ -1,12 +1,12 @@
-package com.example.appium.tests;
+package com.appium.tests;
 
 import io.appium.java_client.android.AndroidDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import com.example.appium.driver.DriverFactory;
-import com.example.appium.pages.ViewsPage;
+import com.appium.driver.DriverFactory;
+import com.appium.pages.ViewsPage;
 
 public class ViewsPageTest {
 

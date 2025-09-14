@@ -1,4 +1,4 @@
-package com.example.appium.tests;
+package com.appium.tests;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
