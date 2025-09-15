@@ -44,13 +44,12 @@
 		</dependency>
 
 		<!-- TestNG -->
-		<dependency>
-			<groupId>org.testng</groupId>
-			<artifactId>testng</artifactId>
-			<version>7.8.0</version>
-			<scope>test</scope>
-		</dependency>
-
+    <dependency>
+        <groupId>org.testng</groupId>
+        <artifactId>testng</artifactId>
+        <version>7.10.2</version> <!-- or latest stable -->
+        <scope>test</scope>
+    </dependency>
 		<!-- SLF4J simple logger (optional, removes warning messages) -->
 		<dependency>
 			<groupId>org.slf4j</groupId>

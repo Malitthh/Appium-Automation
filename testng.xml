@@ -2,8 +2,9 @@
 <suite name="AppiumSuite">
     <test name="ApiDemosTest">
         <classes>
-            <class name="com.example.appium.tests.FirstAppTest"/>
-            <!-- <class name="com.example.appium.tests.ViewsPageTest"/> -->
+            <class name="com.appium.tests.HomePageTest"/>
+            <class name="com.appium.tests.ProductPageTest"/>
+            <class name="com.appium.tests.CartPageTest"/>
         </classes>
     </test>
 </suite>
