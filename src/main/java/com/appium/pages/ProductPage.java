@@ -2,7 +2,7 @@ package com.appium.pages;
 
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.android.AndroidDriver;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -10,8 +10,18 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 public class ProductPage {
-	private final AppiumDriver driver;
+    private final AppiumDriver driver;
     private final WebDriverWait wait;
+
+    //class-level locators
+    private final By addToCartScroll = AppiumBy.androidUIAutomator(
+            "new UiScrollable(new UiSelector().scrollable(true))"
+                    + ".scrollIntoView(new UiSelector().text(\"ADD TO CART\"))"
+    );
+    private final By addToCartBtn = AppiumBy.androidUIAutomator("new UiSelector().text(\"ADD TO CART\")");
+    private final By cartIcon = AppiumBy.xpath(
+            "//android.view.ViewGroup[@content-desc=\"test-Cart\"]/android.view.ViewGroup/android.widget.ImageView"
+    );
 
     public ProductPage(AppiumDriver driver) {
         this.driver = driver;
@@ -19,19 +29,13 @@ public class ProductPage {
     }
 
     public void scrollToAddToCartAndTap() {
-        String uiScroll = "new UiScrollable(new UiSelector().scrollable(true))"
-                + ".scrollIntoView(new UiSelector().text(\"ADD TO CART\"))";
-
-        driver.findElement(AppiumBy.androidUIAutomator(uiScroll));
-
-        WebElement addToCartBtn = wait.until(ExpectedConditions.elementToBeClickable(
-                AppiumBy.androidUIAutomator("new UiSelector().text(\"ADD TO CART\")")));
-        addToCartBtn.click();
+        driver.findElement(addToCartScroll); // Scroll into view
+        WebElement addToCartButton = wait.until(ExpectedConditions.elementToBeClickable(addToCartBtn));
+        addToCartButton.click();
     }
 
     public void tapCartIcon() {
-        WebElement cartIcon = wait.until(ExpectedConditions.elementToBeClickable(
-                AppiumBy.xpath("//android.view.ViewGroup[@content-desc=\"test-Cart\"]/android.view.ViewGroup/android.widget.ImageView")));
-        cartIcon.click();
+        WebElement cart = wait.until(ExpectedConditions.elementToBeClickable(cartIcon));
+        cart.click();
     }
 }
