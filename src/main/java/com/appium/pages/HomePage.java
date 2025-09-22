@@ -33,17 +33,17 @@ public class HomePage {
 			"//android.view.ViewGroup[@content-desc='test-Modal Selector Button']/android.view.ViewGroup/android.view.ViewGroup/android.widget.ImageView");
 	private final By sortPriceLowToHigh = AppiumBy.xpath("//android.widget.TextView[@text='Price (low to high)']");
 
-	// --- Page checks ---
+	//Page checks
 	public boolean isPageLoaded() {
 		return wait.until(ExpectedConditions.visibilityOfElementLocated(homePageTitle)).isDisplayed();
 	}
 
-	// --- Product list ---
+	//Product list
 	public List<WebElement> getProductTitles() {
 		return wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(productTitles));
 	}
 
-	// --- Actions ---
+	//Actions
 	public void tapToggleIcon() {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(toggleIcons)).click();
 	}

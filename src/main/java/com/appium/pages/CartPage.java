@@ -13,7 +13,7 @@ public class CartPage {
     private final AppiumDriver driver;
     private final WebDriverWait wait;
 
-    //locators declared at the top
+    //locators
     private final By checkoutBtn = AppiumBy.accessibilityId("test-CHECKOUT");
     private final By continueBtn = AppiumBy.accessibilityId("test-CONTINUE");
     private final By errorMsg = AppiumBy.accessibilityId("test-Error message");
